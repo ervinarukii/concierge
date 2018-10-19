@@ -1,0 +1,10 @@
+ @import "bootstrap";
+ @import "style";
+ @import "blogs";
+
+ html, body {
+ 	overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100%;
+ }

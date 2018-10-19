@@ -1,0 +1,286 @@
+.font-business {
+	font-size: 22px;
+}
+
+
+
+#business {
+	// padding: 100px 0;
+    background-color: #f6f6f6;
+}
+
+.dot-gold {
+  margin: 0 5px 0 5px;
+  height: 10px;
+  width: 10px;
+  background-color: #cda34f;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+ul {
+    -webkit-padding-start: 20px !important;
+    padding-inline-start: 20px !important;
+}
+
+header {
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('bg-building.jpg') no-repeat bottom right;
+	background-size: cover;
+	color: #cfcfcf;
+	position: relative;
+	height: 100%;
+}
+header p {
+	color: rgba(255,255,255,0.8);
+	font-size: 20px;
+	margin-bottom: 80px;
+}
+.intro-text {
+	position: relative;
+	padding-top: 250px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 170px;
+}
+.intro-text H1 {
+	font-size: 40px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+@include media-breakpoint-up(md) {
+	.intro-text {
+		padding-bottom: 250px;
+	}
+	.intro-text H1 {
+		font-size: 60px;
+	}
+}
+
+.btn-default {
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	background-color: transparent;
+	border: 2px solid rgba(255,255,255,0.8);
+	margin: 0 8px;
+	padding: 12px 24px;
+	font-size: 16px;
+	transition: all 0.5s;
+	border-radius: 4px;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+	background-color: #fff;
+	color: #0dad8d;
+	border-color: #fff;
+}
+
+// service
+.services {
+	padding-bottom: 45px;
+}
+
+.services h2 {
+	color: #cda34f;
+}
+
+.service-col {
+	display: table;
+	padding-bottom: 45px;
+}
+
+.service-col > div > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.service-col > div > div:last-child {
+	// padding-left: 20px;
+}
+
+.service-col .service-icon {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 15px;
+	background: #cda34f;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	line-height: 70px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.service-col h3 {
+	color: #cda34f;
+}
+
+.service-col p {
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #999;
+}
+
+.card {
+	border: none;
+}
+
+.section-line {
+	margin: 0 auto;
+	display: block;
+	height: 4px;
+	width: 80px;
+	background: #cda34f;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.quote-line {
+	margin: 0 auto;
+	display: block;
+	height: 4px;
+	width: 80px;
+	background: white;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.font-style-quote{
+	color: white;
+}
+
+#about {
+	width: 100%;
+	height: auto;
+	background: white;
+	padding-top: 190px;
+}
+
+#about .div-img-bg {
+	padding-bottom: 30px;
+	border: 20px solid #cda34f;
+}
+
+#about .div-img-bg .about-img img {
+	width: 100%;
+	box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+	margin-top: -60px;
+	margin-left: 40px;
+	height: 400px;
+	object-fit: cover;
+}
+
+#about .about-descr .p-heading {
+	font-family: 'Playfair Display', serif;
+	font-size: 28px;
+	text-align: left;
+}
+
+#about .about-descr .separator {
+	max-width: 80%;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+#welcome .about-img {
+	height: 400px;
+	overflow: hidden;
+}
+
+#welcome .about-img img {
+	margin-left: -15px;
+	max-width: 100%;
+}
+
+
+#welcome .content h2 {
+	color: #333;
+	font-weight: 300;
+	font-size: 20px;
+	text-align: left;
+}
+
+#welcome .content h3 {
+	color: #777;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 26px;
+	font-style: italic;
+	text-align: left;
+}
+
+#welcome .content p {
+	font-size: 15px;
+	line-height: 19px;
+	text-align: left;
+}
+
+#welcome .content p:last-child {
+	margin-bottom: 0;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#about .div-img-bg {
+		padding: 0;
+	}
+	#about .div-img-bg .about-img img {
+		margin-top: 0%;
+		margin-left: calc(0% - 0px);
+	}
+} 
+
+@media (max-width: 768px) {
+	#welcome .about-img {
+		height: auto;
+	}
+	#welcome .about-img img {
+		margin-left: 0;
+		padding-bottom: 30px;
+	}
+}
+
+@media (max-width: 600px) {
+	#about .div-img-bg {
+		padding: 0;
+	}
+	#about .div-img-bg .about-img img {
+		margin-top: 0%;
+		margin-left: calc(0% - 0px);
+	}
+}
+
+@media (max-width: 480) {
+	#about .div-img-bg {
+		padding: 0;
+	}
+	#about .div-img-bg .about-img img {
+		margin-top: 0%;
+		margin-left: calc(0% - 0px);
+	}
+	#about .about-descr .p-heading {
+		font-size: 20px;
+	}
+	#about .about-descr .separator {
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+}
+
+.bg-quote {
+	background-color: #cda34f;
+}
+
+.brand{
+	width: 160px;
+	height: auto;
+}
+
+.logo-cover{
+	width: 400px;
+	height: auto;
+}
+
+.gold-font{
+	color: #cda34f;
+}
