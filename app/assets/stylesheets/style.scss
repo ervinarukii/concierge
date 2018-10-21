@@ -6,21 +6,21 @@
 
 #business {
 	// padding: 100px 0;
-    background-color: #f6f6f6;
+	background-color: #f6f6f6;
 }
 
 .dot-gold {
-  margin: 0 5px 0 5px;
-  height: 10px;
-  width: 10px;
-  background-color: #cda34f;
-  border-radius: 50%;
-  display: inline-block;
+	margin: 0 5px 0 5px;
+	height: 10px;
+	width: 10px;
+	background-color: #cda34f;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 ul {
-    -webkit-padding-start: 20px !important;
-    padding-inline-start: 20px !important;
+	-webkit-padding-start: 20px !important;
+	padding-inline-start: 20px !important;
 }
 
 header {
@@ -216,6 +216,16 @@ header p {
 
 #welcome .content p:last-child {
 	margin-bottom: 0;
+}
+
+#footer {
+	font-size: 14px;
+	.border-top{
+		border-top:1px solid grey !important;
+		.contact{
+			font-weight: 500;
+		}
+	}
 }
 
 
