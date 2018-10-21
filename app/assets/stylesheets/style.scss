@@ -3,10 +3,12 @@
 }
 
 
-
 #business {
-	// padding: 100px 0;
 	background-color: #f6f6f6;
+}
+
+.service-section {
+	background-color: #f6f6f6 !important;
 }
 
 .dot-gold {
@@ -29,31 +31,34 @@ header {
 	color: #cfcfcf;
 	position: relative;
 	height: 100%;
-}
-header p {
-	color: rgba(255,255,255,0.8);
-	font-size: 20px;
-	margin-bottom: 80px;
-}
-.intro-text {
-	position: relative;
-	padding-top: 250px;
-	padding-right: 0;
-	padding-left: 0;
-	padding-bottom: 170px;
-}
-.intro-text H1 {
-	font-size: 40px;
-	text-transform: uppercase;
-	color: #fff;
+	.intro-text {
+		position: relative;
+		padding-top: 250px;
+		padding-right: 0;
+		padding-left: 0;
+		padding-bottom: 170px;
+		h1 {
+			font-size: 40px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+		p{
+			color: rgba(255,255,255,0.8);
+			font-size: 20px;
+			margin-bottom: 80px;
+			font-family: 'montserratMedium';
+		}
+	}
 }
 
 @include media-breakpoint-up(md) {
-	.intro-text {
-		padding-bottom: 250px;
-	}
-	.intro-text H1 {
-		font-size: 60px;
+	header{	
+		.intro-text {
+			padding-bottom: 250px;
+			h1 {
+				font-size: 60px;
+			}
+		}
 	}
 }
 
@@ -77,10 +82,9 @@ header p {
 // service
 .services {
 	padding-bottom: 45px;
-}
-
-.services h2 {
-	color: #cda34f;
+	h2 {
+		color: #cda34f;
+	}
 }
 
 .service-col {
@@ -148,75 +152,86 @@ header p {
 	color: white;
 }
 
+/* ============================= about section do ======================== */
+
 #about {
 	width: 100%;
 	height: auto;
 	background: white;
 	padding-top: 190px;
+	.div-img-bg {
+		padding-bottom: 30px;
+		border: 20px solid #cda34f;
+		.about-img{
+			img {
+				width: 100%;
+				box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+				margin-top: -60px;
+				margin-left: 40px;
+				height: 400px;
+				object-fit: cover;
+			}
+		}
+	}
+	.about-descr{
+		.p-heading {
+			font-family: 'Playfair Display', serif;
+			font-size: 28px;
+			text-align: left;
+		}
+		.separator {
+			max-width: 80%;
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
 }
 
-#about .div-img-bg {
-	padding-bottom: 30px;
-	border: 20px solid #cda34f;
-}
-
-#about .div-img-bg .about-img img {
-	width: 100%;
-	box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
-	margin-top: -60px;
-	margin-left: 40px;
-	height: 400px;
-	object-fit: cover;
-}
-
-#about .about-descr .p-heading {
-	font-family: 'Playfair Display', serif;
-	font-size: 28px;
-	text-align: left;
-}
-
-#about .about-descr .separator {
-	max-width: 80%;
-	margin-bottom: 0;
-	text-align: left;
-}
-
-#welcome .about-img {
-	height: 400px;
-	overflow: hidden;
-}
-
-#welcome .about-img img {
-	margin-left: -15px;
-	max-width: 100%;
-}
+/* ============================= about section end ======================== */
 
 
-#welcome .content h2 {
-	color: #333;
-	font-weight: 300;
-	font-size: 20px;
-	text-align: left;
+/* ============================= welcome section do ======================== */
+
+#welcome {
+	.about-img {
+		height: 400px;
+		overflow: hidden;
+		img {
+			margin-left: -15px;
+			max-width: 100%;
+		}
+	}
+	.content{
+		h2 {
+			color: #333;
+			font-weight: 300;
+			font-size: 20px;
+			text-align: left;
+			font-family: 'montserratSemiBold';
+		}
+		h3 {
+			color: #777;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 26px;
+			font-style: italic;
+			text-align: left;
+		}
+		p {
+			font-size: 15px;
+			line-height: 19px;
+			text-align: left;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
-#welcome .content h3 {
-	color: #777;
-	font-weight: 300;
-	font-size: 18px;
-	line-height: 26px;
-	font-style: italic;
-	text-align: left;
-}
+/* ============================= welcome section end ======================== */
 
-#welcome .content p {
-	font-size: 15px;
-	line-height: 19px;
-	text-align: left;
-}
 
-#welcome .content p:last-child {
-	margin-bottom: 0;
-}
+/* ============================= footer section do ======================== */
 
 #footer {
 	font-size: 14px;
@@ -227,6 +242,9 @@ header p {
 		}
 	}
 }
+
+/* ============================= footer section end ======================== */
+
 
 
 
