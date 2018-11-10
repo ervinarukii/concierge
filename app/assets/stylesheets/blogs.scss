@@ -62,3 +62,93 @@
     padding: 12px 0;
   }
 }
+
+.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #868e96;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: 0.5;
+  }
+
+  .page-heading,
+  .post-heading,
+  .site-heading {
+    padding: 200px 0 150px;
+    color: white;
+  }
+  .page-heading,
+  .site-heading {
+    text-align: center;
+  }
+  .page-heading h1,
+  .site-heading h1 {
+    font-size: 50px;
+    margin-top: 0;
+  }
+  .page-heading .subheading,
+  .site-heading .subheading {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.1;
+    display: block;
+    margin: 10px 0 0;
+  }
+  .post-heading h1 {
+    font-size: 35px;
+  }
+  .post-heading .meta,
+  .post-heading .subheading {
+    line-height: 1.1;
+    display: block;
+  }
+  .post-heading .subheading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 30px;
+  }
+  .post-heading .meta {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Lora', 'Times New Roman', serif;
+  }
+  .post-heading .meta a {
+    color: #fff;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .masthead .page-heading,
+  .masthead .post-heading,
+  .masthead .site-heading {
+    padding: 200px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .masthead .page-heading h1,
+  .masthead .site-heading h1 {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+ .post-heading h1 {
+  font-size: 55px;
+}
+.post-heading .subheading {
+  font-size: 30px;
+}
+}
