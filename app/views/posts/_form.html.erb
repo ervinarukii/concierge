@@ -1,32 +1,41 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="row h-100">
+  <div class="col-12 col-md-6 mx-auto py-5">
+    <div class="my-5 py-5 px-4 border rounded">
+      <h3 class="text-center gold-font">New Post</h3>
+      <div class="section-line"></div>
+      <%= form_with(model: post, local: true) do |form| %>
+      <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <ul>
+          <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
       <% end %>
-      </ul>
+
+      <div class="field form-group">
+        <small><%= form.label :title %></small>
+        <%= form.text_field :title, class:"form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <small><%= form.label :text %></small>
+        <%= form.text_area :text, class:"form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <small><%= form.label :image %></small>
+        <%= form.text_field :image, class:"form-control-file", type:"file" %>
+      </div>
+
+      <div class="actions text-right py-3">
+        <%= form.submit 'Post', class:"btn btn-primary w-25" %>
+      </div>
+      <% end %>
+      <small><%= link_to 'Back', posts_path, class:"text-right text-dark d-block" %></small>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
   </div>
-
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

@@ -1,36 +1,39 @@
-<!-- <header class="masthead" style="background-image: url(<%= image_path "post-bg.jpg"%>)">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="post-heading">
-              <h1>Your Blog's Title</h1>
-              <h2 class="subheading">Your Tagline</h2>
-              <!-- <span class="meta">Posted by
-                <a href="#">Start Bootstrap</a>
-                on August 24, 2018</span> -->
-            </div>
-          </div>
+<header class="masthead" style="background-image: url(<%= image_path "post-bg.jpg"%>)">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1><%= @post.title %></h1>
+          <h2 class="subheading">Your Tagline</h2>
+          <span class="meta">Posted by
+            <a href="#">Start Bootstrap</a>
+          on August 24, 2018</span>
         </div>
       </div>
-    </header> -->
+    </div>
+  </div>
+</header>
 
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-10 mx-auto my-5">
+      <p id="notice"><%= notice %></p>
+      <h2>
+        <%= @post.title %>
+      </h2>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+      <p>
+        <%= @post.text %>
+      </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
+      <p>
+        <strong>Image:</strong>
+        <%= @post.image %>
+      </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+      <%= link_to 'Edit', edit_post_path(@post) %> |
+      <%= link_to 'Back', posts_path %>
+    </div>
+  </div>
+</div>
