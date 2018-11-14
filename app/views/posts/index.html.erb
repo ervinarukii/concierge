@@ -25,22 +25,22 @@
         <h3><%= post.title %></h3>
         <div class="row">
           <div class="col-12 col-md-6">
-            <p><%= post.text %></p>
+            <p><%= post.text.html_safe %></p>
           </div>
           <div class="col-12 col-md-6">
-            <img><%= post.image %></img>
+            <%= image_tag post.image.url %>
           </div>
         </div>
       </div>
-      <div class="content-post d-flex justify-content-end">
+      <!-- <div class="content-post d-flex justify-content-end">
         <small class="mx-2"><%= link_to 'Show', post, class:"d-block text-dark" %></small>
         <small class="mx-2"><%= link_to 'Edit', edit_post_path(post), class:"d-block text-dark" %></small>
         <small class="mx-2"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"d-block text-dark" %></small>
-      </div>
+      </div> -->
       <% end %>
-      <div class="new-post my-3 text-right">
+      <!-- <div class="new-post my-3 text-right">
         <%= link_to 'New Post', new_post_path, class:"btn btn-primary" %>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

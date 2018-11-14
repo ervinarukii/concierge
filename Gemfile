@@ -6,7 +6,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 
-gem 'pg'
+gem 'pg'  
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -29,12 +29,13 @@ gem 'jquery-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use ActiveStorage variant
+gem 'annotate'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave'
 gem 'devise'
 # Use Capistrano for deployment
 gem 'rails_admin'
+gem 'ckeditor'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -43,6 +44,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'awesome_print'
 end
 
 group :development do
@@ -64,3 +70,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :development do
+  gem 'pg'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'  
+end
+
+gem 'rails_12factor', group: :production

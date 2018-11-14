@@ -23,6 +23,8 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
+  config.excluded_models = ['Ckeditor::Asset', 'Ckeditor::AttachmentFile', 'Ckeditor::Picture']
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -37,5 +39,17 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+  end
+
+  config.model Post do
+    edit do
+      field :title
+      field :image
+      field :text, :ck_editor
+      # For RailsAdmin < 0.5.0
+      # field :description do
+      #   ckeditor true
+      # end
+    end
   end
 end
