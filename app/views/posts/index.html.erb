@@ -1,43 +1,25 @@
-<header class="masthead" style="background-image: url(<%= image_path "post-bg.jpg"%>)">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-10 mx-auto text-center">
-        <div class="post-heading">
-          <h1 style="font-size: 55px;" class="font-weight-bold">Concierge Blog</h1>
-          <!-- <span class="subheading">Lorem ipsum donot</span> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
 <div class="container">
+  <div class="mt-3 mb-5 d-flex justify-content-between align-items-center">
+    <%= link_to'Home', blogs_index_path, class:"text-dark"  %>
+    <%= image_tag 'concierge-logo.png', class: "w-25 h-25" %>
+  </div>
   <p id="notice"><%= notice %></p>
-
-  <!-- <h1 class="text-center gold-font">Posts</h1>
-  <div class="section-line"></div> -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto pb-5 content-blog">
+      <div class="col-lg-10 col-md-10 mx-auto pb-5 content-blog">
         <% @posts.each do |post| %>
         <div class="posting mb-3">
           <h3><%= link_to post.title, post, class: "font-weight-bold" %></h3>
-          <div class="row">
-            <div class="col-12 col-md-12 col-lg-12">
-                <p><%= truncate post.text.html_safe, length:300, escape: false %></p>
-            </div>
+          <hr>
+          <div class="d-flex align-items-center">
+            <img class="w-25 h-25 col-6" src="<%= post.image %>" alt="img-blog">
+            <%= truncate post.text.html_safe, length:300, escape: false, class:"col-6" %>
           </div>
+          <p class="text-right">
+            <%= link_to 'Read More', post, class: "text-dark text-right" %>
+          </p>
         </div>
-        <!-- <div class="content-post d-flex justify-content-end">
-          <small class="mx-2"><%#= link_to 'Show', post, class:"d-block text-dark" %></small>
-          <small class="mx-2"><%#= link_to 'Edit', edit_post_path(post), class:"d-block text-dark" %></small>
-          <small class="mx-2"><%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"d-block text-dark" %></small>
-        </div> -->
         <% end %>
-        <!-- <div class="new-post my-3 text-right">
-          <%#= link_to 'New Post', new_post_path, class:"btn btn-primary" %>
-        </div> -->
       </div>
     </div>
   </div>
